@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Comment</title>
+</head>
+
+<body>
+    <div class="loading">
+        <div class="back">
+            <div class="b b1" >
+                <div class="a a1"></div>
+            </div>
+            <div class="b b2" >
+                <div class="a a2"></div>
+            </div>
+            <div class="b b3" >
+                <div class="a a3"></div>
+            </div>
+            <div class="b b4" >
+                <div class="a a4"></div>
+            </div>
+        </div>
+        <p style="text-align: center;margin-top: 45px;" >加载中请稍后...<br>Loading...</p>
+    </div>
+    <div class="title">
+        <h1 title="点击启动评论显示" onclick="run()">直播间评论</h1>
+        <div onclick="showRoomList()" >
+            <div class="size left" ></div>
+            <div class="size right" ></div>
+        </div>
+        <div class="roomlist-box">
+            <!-- ::before -->     
+            <div class="roomlist">
+                <ul>
+                    <!-- 下拉菜单 -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="danmaku-box">
+        <div class="daycheck" onclick="doSign()" title="单击以签到" >
+            <p>签到栏</p>
+        </div>
+        <div class="speed">
+            <div class="circle" title="指示灯"></div>
+            <input type="range" onmousewheel="wheelsetcolor()" onmouseup="setcolor(value,max,min)" min="500" max="6000" value="6000" step="500" title="500-500-6000ms">
+            <div class="rangevalue" onmousewheel="wheelsetcolor()">6000</div>
+        </div>
+        <div class="showchat-background">
+            <div class="showchat">
+                <!-- danmaku here -->
+            </div>
+        </div>
+        <div class="send">
+            <!-- 发送信息 -->
+            <textarea id="sendchat" oninput="changeFontNum(value)" onfocus="sendValue(this)" maxlength="30" rows="2" placeholder="此处发送信息"></textarea>
+            <div class="fontnum"><i>0</i><i>/30</i></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="public.js"></script>
+    <script type="text/javascript" src="chat.js"></script>
+    <script type="text/javascript" src="send.js"></script>
+    <script type="text/javascript" src="daycheck.js"></script>
+</body>
+
+</html>

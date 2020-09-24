@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "npm start",
+            "name": "npm start",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "debug nodejs",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "name": "run npm start",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "D:/Nodejs/node_global/electron",
+            "windows": {
+            "runtimeExecutable": "D:/Nodejs/node_global/electron.cmd"
+            },
+            "args" : ["."]
+        },
+    ]
+}

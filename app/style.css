@@ -1,0 +1,351 @@
+a,
+body,
+button,
+dd,
+div,
+dl,
+dt,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hr,
+input,
+li,
+ol,
+p,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    opacity: 1;
+    background-color: skyblue;
+    transition: opacity 1s;
+}
+.back {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50% auto 0;
+}
+.b,
+.a {
+    width: 100px;
+    height: 100px;
+}
+.b {
+    position: absolute;
+    overflow: hidden;
+    animation: xuan 1s linear;
+    animation-iteration-count: infinite;
+}
+.a {
+    border-radius: 50%;
+    position: absolute;
+}
+.back .b1 {
+    left: 0;
+    top: 0;
+    transform-origin: 100px 100px;
+}
+.back .b2 {
+    right: 0;
+    top: 0;
+    transform-origin: 0px 100px;
+}
+.back .b3 {
+    left: 0;
+    bottom: 0;
+    transform-origin: 100px 0px;
+}
+.back .b4 {
+    right: 0;
+    bottom: 0;
+    transform-origin: 0px 0px;
+}
+.back .a1 {
+    top: 50px;
+    background-color: red;
+}
+.back .a2 {
+    left: -50px;
+    background-color: orange;
+}
+.back .a3 {
+    right: -50px;
+    background-color: #35c735;
+}
+.back .a4 {
+    top: -50px;
+    background-color: yellow;
+}
+@keyframes xuan {
+    from {}
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.title {
+    position: relative;
+    width: 10em;
+    margin: 0 auto;
+    color: black;
+    text-align: center;
+}
+.title>h1 {
+    cursor: pointer;
+    transition: color .3s;
+}
+.title>h1:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+.title>div[onclick] {
+    position: absolute;
+    top: 15px;
+    left: 11em;
+    width: 50px;
+    height: 15px;
+    cursor: pointer;
+}
+.title .size {
+    position: absolute;
+    top: 0px;
+    width: 20px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.title .left {
+    left: 0px;
+    transform-origin: 0 50%;
+}
+.title .right {
+    left: 17px;
+    transform-origin: 100% 50%;
+}
+.title>div:hover .size{
+    background-color: rgb(128, 128, 128);
+}
+.title>div:hover .left{
+    transform: rotateZ(30deg) scaleX(1.15);
+}
+.title>div:hover .right{
+    transform: rotateZ(-30deg) scaleX(1.15);
+}
+.title .roomlist-box {
+    z-index: 1;
+    visibility: hidden;
+}
+
+.title .roomlist-box::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 38px;
+    right: -39.5px;
+    width: 10px;
+    height: 10px;
+    transform: rotateZ(45deg);
+    background-color: #a6ddf3;
+}
+.title .roomlist {
+    z-index: 1;
+    position: absolute;
+    top: 43px;
+    left: 106px;
+    width: 122px;
+    height: 10px;
+    padding-top: 5px;
+    background-color: #a6ddf3;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+    overflow: hidden;
+    transition: height cubic-bezier(0, 1.17, 0.15, 1.11) 1s;
+}
+
+.roomlist>ul {
+    height: 100%;
+    overflow-y: scroll;
+}
+.roomlist>ul::-webkit-scrollbar {
+    width: 5px;
+}
+.roomlist>ul::-webkit-scrollbar-track {
+    visibility: hidden;
+}
+.roomlist>ul::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #86d4f3;
+}
+.roomlist>ul>li {
+    padding: 5px;
+    overflow:hidden;
+    white-space: nowrap;  
+    text-overflow:ellipsis; 
+    cursor: pointer;
+}
+.roomlist>ul>li:last-child {
+    padding-bottom: 100px;
+}
+.speed {
+    height: 21px;
+    position: absolute;
+    transform-origin: left;
+    transform: rotateZ(-90deg) rotateX(180deg);
+    left: -10px;
+    top: 70%;
+}
+.speed input[type='range'] {
+    outline: none;
+    width: 150px;
+    -webkit-appearance: none;
+}
+/* 滑块 */
+.speed input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    transform: translateY(-3px);
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    cursor: pointer;
+    background-color: skyblue;
+}
+/* 轨道 */
+.speed input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    margin: 7px 0;
+    border-radius: 7px;
+    border: 1px solid #EEEEEE;
+    height: 7px;
+}
+.speed .circle {
+    display: inline-block;
+    margin: 5px 0;
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    transition: background-color .1s;
+    cursor: pointer;
+    background-color: gray;
+}
+.speed .rangevalue {
+    display: inline-block;
+    width: 4em;
+    text-align: center;
+    font-size: 6px;
+    color: transparent;
+    transition: color .3s;
+    transform-origin: 0 50%;
+    transform: rotateX(180deg) rotateZ(90deg) translateX(-4.5px);
+    cursor: pointer;
+}
+.danmaku-box{
+    position: relative;
+    width: 300px;
+    margin: auto;
+    background-color: rgb(235, 255, 255);
+}
+.daycheck {
+    height: 20px;
+    text-align: center;
+    background-color: rgb(189, 255, 255);
+    cursor: pointer;
+}
+.daycheck:hover {
+    background-color: rgb(174, 255, 255);
+}
+.showchat-background {
+    height: calc(100% - 30px - 20px);
+    overflow-y: scroll;
+    /* scroll-behavior: smooth; */
+}
+/* 滚动条整体 */
+.showchat-background::-webkit-scrollbar {
+    width: 10px;
+}
+/* 轨道 */
+.showchat-background::-webkit-scrollbar-track {
+    visibility: hidden;
+}
+/* 滑块 */
+.showchat-background::-webkit-scrollbar-thumb {
+    visibility: hidden;
+    background-color: #C1C1C1;
+    border-radius: 10px;
+}
+.showchat-background:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+.chat {
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.chat .xun {
+    visibility:hidden;
+    position: absolute;
+    overflow: hidden;
+    border: 0px;
+    border-radius: 5px;
+    transition: all .3s cubic-bezier(0, 2.31, 1, 1) 0s;
+    text-align: center;
+}
+.chat:hover .xun{
+    visibility:visible;
+    border: 1px solid skyblue;
+    transform: translateY(-26px);
+    background-color: #ffffff;
+}
+.chat .userinfo {
+    margin-top: 5px;
+    padding: 2.5px 0;
+}
+.chat .userinfo span {
+    margin-right: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: gray;
+}
+.chat .userinfo :nth-last-child(2)::after {
+    content: ':';
+}
+.send {
+    height: 30px;
+    position: relative;
+}
+.send #sendchat {
+    width: calc(100% - 10px - 2px);
+    height: 32px;
+    padding: 5px 5px;
+    border:1px solid #80808034;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+}
+.send .fontnum {
+    position: absolute;
+    transform: translateX(268px) translateY(-20px) ;
+    color: gray;
+    font-size: 10px;
+}

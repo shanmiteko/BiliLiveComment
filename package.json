@@ -1,0 +1,14 @@
+{
+    "name": "Comment",
+    "version": "2.3.3",
+    "description": "Bili Live Comment",
+    "main": "main.js",
+    "scripts": {
+    "start": "electron ."
+    },
+    "author": "shanmite",
+    "license": "GPL",
+    "devDependencies": {
+        "electron": "^9.1.2"
+    }
+}
