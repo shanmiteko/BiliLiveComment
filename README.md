@@ -4,8 +4,8 @@
 <h2>Electron项目</h2>
 <p><strong>Nodejs+原生JavaScript</strong></p>
 <p>使用 JavaScript，HTML 和 CSS 构建的桌面应用程序</p>
-<img title='示例图1' src= 'REDME.png\example1.png' style='width:200px;'></img>
-<img title='示例图2' src= 'REDME.png\example2.png' style='width:200px;'></img>
+<img title='示例图1' src= 'REDME.png\example1.png' width="200px"></img>
+<img title='示例图2' src= 'REDME.png\example2.png' width="200px"></img>
 <hr>
 <h2>功能</h2>
 <ul>
