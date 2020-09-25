@@ -85,27 +85,27 @@ function changeFontNum(e) {
     value = e.replace(/[\r\n]/g,"");
     fontnum.innerText = value.length;
 }
-function sendValue(e) {
-    e.style.border = '1px solid #a7d4e6';
-    if (typeof e.onkeydown != 'function'&& typeof e.onblur != 'function') {
-        e.onkeydown = ()=>{
-            if (event.keyCode == 13) {
+function sendValue(textarea) {
+    textarea.style.border = '1px solid #a7d4e6';
+    if (typeof textarea.onkeydown != 'function'&& typeof textarea.onblur != 'function') {
+        textarea.onblur = ()=>{
+            textarea.style.border = '1px solid #80808034';
+        }
+        textarea.onkeydown = (ev)=>{
+            if (ev.keyCode == 13) {
                 /*按下回车键*/
-                if (e.value == '') {
+                if (textarea.value == '') {
                     return false
                 } else{
-                    sendChat(e.value);
-                    e.value = null;
+                    sendChat(textarea.value);
+                    textarea.value = null;
                     fontnum.innerText = 0;
                     return false
                 }
             }
         };
-        e.onblur = ()=>{
-            e.style.border = '1px solid #80808034';
-        }
     }
     else {
-        return 0;
+        return;
     }
 }
