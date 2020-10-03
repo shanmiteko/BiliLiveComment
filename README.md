@@ -18,11 +18,11 @@
 <hr>
 <h2>使用接口</h2>
 <p>直播间评论(POST)</p> 
-<a title='直播间评论'>api.live.bilibili.com/xlive/web-room/v1/dM/gethistory</a>
+<a title='直播间评论' href="https://api.live.bilibili.com/xlive/web-room/v1/dM/gethistory">api.live.bilibili.com/xlive/web-room/v1/dM/gethistory</a>
 <p>签到(GET)</p>
-<a title='签到'>api.live.bilibili.com/xlive/web-ucenter/v1/sign/DoSign</a>
+<a title='签到' href="https://api.live.bilibili.com/xlive/web-ucenter/v1/sign/DoSign">api.live.bilibili.com/xlive/web-ucenter/v1/sign/DoSign</a>
 <p>发送评论(POST)</p>
-<a title='发送评论'>api.live.bilibili.com/msg/send</a>
+<a title='发送评论' href="https://api.live.bilibili.com/msg/send">api.live.bilibili.com/msg/send</a>
 <hr>
 <p>v1.0待优化</p>
 <p>(坑太多放弃重构)</p>
