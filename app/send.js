@@ -21,7 +21,7 @@ const sendChat = (chat)=> {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36',
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
             'Origin': 'https://live.bilibili.com',
-            'Cookie': "SESSDATA=266867a2%2C1612919172%2C085b8*81; "
+            'Cookie': cookie
         }
     }
     let req = request_send(options,res =>{

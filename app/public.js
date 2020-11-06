@@ -1,6 +1,6 @@
 const {ipcRenderer} = require('electron');
 const {stringify} = require('querystring');
-
+const fs = require('fs');
 let box = document.getElementsByClassName('danmaku-box')[0];
 let input = document.querySelector('input[type=range]');
 let rangeValue = document.querySelector('.speed .rangevalue');
@@ -8,6 +8,7 @@ let fontnum = document.querySelector('.fontnum>i');
 let roomlistul = document.querySelector('.roomlist>ul');
 let room = 0;
 
+const cookie = fs.readFileSync('app/cookie').toString();
 (()=>{
     windowChangeH();
     /* 禁止选中文本 */

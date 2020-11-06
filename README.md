@@ -16,6 +16,10 @@
 <p>左侧滑块调节短轮询频率</p>
 <p>右上隐藏式下拉菜单</p>
 <hr>
+<h2>如何使用<h2>
+<p>app/cookie文件中加入cookie<p>
+<p>app/room文件中加入房间信息<p>
+<hr>
 <h2>使用接口</h2>
 <p>直播间评论(POST)</p> 
 <a title='直播间评论' href="https://api.live.bilibili.com/xlive/web-room/v1/dM/gethistory">api.live.bilibili.com/xlive/web-room/v1/dM/gethistory</a>

@@ -27,7 +27,7 @@ ipcRenderer.on('thisroom',(event,arg)=>{
             'Accept': 'application/json, text/plain, */*',
             'Content-Length': contents.length,
             'Origin': 'https://live.bilibili.com',
-            'Cookie': 'SESSDATA=7f23531b%2C1604141838%2Cfdf9d*51; '
+            'Cookie': cookie
         }
     };
     /*点击nickname成功后自动关闭roomlist*/
