@@ -1,0 +1,29 @@
+卷 Windows 的文件夹 PATH 列表
+卷序列号为 A8E6-CCD9
+C:.
+│  .gitignore
+│  favicon.ico
+│  main.js
+│  nohup.out
+│  package.json
+│  preload.js
+│  README.md
+│  start.bash
+│  tree.txt
+│  
+├─.vscode
+│      launch.json
+│      
+├─app
+│      chat.js
+│      cookie
+│      daycheck.js
+│      index.html
+│      public.js
+│      room
+│      send.js
+│      style.css
+│      
+└─REDME.png
+        example.png
+        

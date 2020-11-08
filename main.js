@@ -2,7 +2,7 @@ const { app, BrowserWindow, Menu ,shell ,ipcMain } = require('electron');
 const path = require('path');
 const fs = require('fs');
 ipcMain.on('whichroom',(event,arg)=>{
-    const roomjson = JSON.parse(fs.readFileSync('app/room').toString());
+    const roomjson = JSON.parse(fs.readFileSync('app/room.json').toString());
     if (arg == 'init') {
         event.sender.send('roomlist',roomjson);
         event.sender.send('thisroom',roomjson['ダイナマイト']);

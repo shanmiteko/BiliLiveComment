@@ -1,32 +1,76 @@
-<h1>BiliLiveComment</h1>
-<p>显示B站直播间评论</p>
-<hr>
-<h2>Electron项目</h2>
-<p><strong>Nodejs+原生JavaScript</strong></p>
-<p>使用 JavaScript，HTML 和 CSS 构建的桌面应用程序</p>
-<img title='示例图1' src= 'REDME.png\example1.png' width="200px"></img>
-<img title='示例图2' src= 'REDME.png\example2.png' width="200px"></img>
-<hr>
-<h2>功能</h2>
-<ul>
-    <li>评论滚动显示</li>
-    <li>快捷签到</li>
-    <li>发送评论</li>
-</ul>
-<p>左侧滑块调节短轮询频率</p>
-<p>右上隐藏式下拉菜单</p>
-<hr>
-<h2>如何使用<h2>
-<p>app/cookie文件中加入cookie<p>
-<p>app/room文件中加入房间信息<p>
-<hr>
-<h2>使用接口</h2>
-<p>直播间评论(POST)</p> 
-<a title='直播间评论' href="https://api.live.bilibili.com/xlive/web-room/v1/dM/gethistory">api.live.bilibili.com/xlive/web-room/v1/dM/gethistory</a>
-<p>签到(GET)</p>
-<a title='签到' href="https://api.live.bilibili.com/xlive/web-ucenter/v1/sign/DoSign">api.live.bilibili.com/xlive/web-ucenter/v1/sign/DoSign</a>
-<p>发送评论(POST)</p>
-<a title='发送评论' href="https://api.live.bilibili.com/msg/send">api.live.bilibili.com/msg/send</a>
-<hr>
-<p>v1.0待优化</p>
-<p>(坑太多放弃重构)</p>
+# BiliLiveComment
+## 描述
+使BiliBili弹幕单独显示的桌面客户端  
+## 实现方式
+**Nodejs(electron)**+**H5**  
+>使用 JavaScript，HTML 和 CSS 构建的桌面应用程序  
+
+![示例图](REDME.png\example.png)
+## 功能
+- 主要功能  
+    - 评论滚动显示  
+    - 快捷签到  
+    - 发送评论  
+- 调节  
+    - 左侧滑块调节短轮询频率  
+    - 右上隐藏式下拉菜单  
+
+---
+
+## 如何使用
+```
+BiliLiveComment
+    │.gitignore
+    │  favicon.ico
+    │  main.js
+    │  nohup.out
+    │  package.json
+    │  preload.js
+    │  README.md
+    │  start.bash (此处启动)
+    │  tree.txt
+    │  
+    ├─.vscode
+    │      launch.json
+    │      
+    ├─app
+    │      room.js (在此文件中添加房间信息)
+    │      cookie (在此文件中添加cookie)
+    │      chat.js
+    │      daycheck.js
+    │      index.html
+    │      public.js
+    │      send.js
+    │      style.css
+    │      
+    └─REDME.png
+            example.png
+```
+**文件内容要求**  
+`./app/room.json`  
+```json
+{
+    /* 用户名(string): 对应的roomid(number) */
+    "哔哩哔哩弹幕网": 2233,
+}
+```
+`./app/cookie`  
+```markdown
+cookie中的以下键值对(最后加空格)
+格式-> SESSDATA=697ab56%122%2202C7C1861268918*81; 
+```
+命令行启动  
+```bash
+$ npm start
+```
+## Bili API
+直播间评论(POST)  
+[api.live.bilibili.com/xlive/web-room/v1/dM/gethistory](https://api.live.bilibili.com/xlive/web-room/v1/dM/gethistory)  
+签到(GET)  
+[api.live.bilibili.com/xlive/web-ucenter/v1/sign/DoSign](https://api.live.bilibili.com/xlive/web-ucenter/v1/sign/DoSign)  
+发送评论(POST)  
+[api.live.bilibili.com/msg/send](https://api.live.bilibili.com/msg/send)
+
+---
+v1.0待优化  
+(坑太多放弃重构)
