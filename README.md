@@ -1,11 +1,11 @@
 # BiliLiveComment
 ## 描述
-使BiliBili弹幕单独显示的桌面客户端  
+使BiliBili弹幕独立显示的桌面客户端  
 ## 实现方式
 **Nodejs(electron)**+**H5**  
 >使用 JavaScript，HTML 和 CSS 构建的桌面应用程序  
 
-![示例图](REDME.png\example.png)
+![示例图](REDME.png/example.png)
 ## 功能
 - 主要功能  
     - 评论滚动显示  
@@ -20,31 +20,30 @@
 ## 如何使用
 ```
 BiliLiveComment
-    │.gitignore
-    │  favicon.ico
-    │  main.js
-    │  nohup.out
-    │  package.json
-    │  preload.js
-    │  README.md
-    │  start.bash (此处启动)
-    │  tree.txt
-    │  
-    ├─.vscode
-    │      launch.json
-    │      
-    ├─app
-    │      room.js (在此文件中添加房间信息)
-    │      cookie (在此文件中添加cookie)
-    │      chat.js
-    │      daycheck.js
-    │      index.html
-    │      public.js
-    │      send.js
-    │      style.css
-    │      
-    └─REDME.png
-            example.png
+│  .gitignore
+│  favicon.ico
+│  main.js
+│  nohup.out
+│  package.json
+│  preload.js
+│  README.md
+│  start.bash (此处启动)
+│  
+├─.vscode
+│      launch.json
+│      
+├─app
+│      cookie (在此文件中添加cookie)
+│      room.json (在此文件中添加房间信息)
+│      chat.js
+│      daycheck.js
+│      index.html
+│      public.js
+│      send.js
+│      style.css
+│      
+└─REDME.png
+        example.png
 ```
 **文件内容要求**  
 `./app/room.json`  
@@ -59,8 +58,10 @@ BiliLiveComment
 cookie中的以下键值对(最后加空格)
 格式-> SESSDATA=697ab56%122%2202C7C1861268918*81; 
 ```
-命令行启动  
+**命令行启动**  
+首先安装[Node.js](https://nodejs.org/zh-cn/download/)环境  
 ```bash
+$ npm install
 $ npm start
 ```
 ## Bili API
