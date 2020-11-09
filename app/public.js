@@ -8,7 +8,8 @@ let fontnum = document.querySelector('.fontnum>i');
 let roomlistul = document.querySelector('.roomlist>ul');
 let room = 0;
 
-const cookie = fs.readFileSync('app/cookie').toString();
+const cookie = fs.readFileSync('app/cookie.txt').toString();
+if (cookie === '') {alert('cookie为空')}
 (()=>{
     windowChangeH();
     /* 禁止选中文本 */

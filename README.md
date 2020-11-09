@@ -33,7 +33,7 @@ BiliLiveComment
 │      launch.json
 │      
 ├─app
-│      cookie (在此文件中添加cookie)
+│      cookie.txt (在此文件中添加cookie)
 │      room.json (在此文件中添加房间信息)
 │      chat.js
 │      daycheck.js
@@ -53,7 +53,7 @@ BiliLiveComment
     "哔哩哔哩弹幕网": 2233,
 }
 ```
-`./app/cookie`  
+`./app/cookie.txt` (使用cookie以登录)  
 ```markdown
 cookie中的以下键值对(最后加空格)
 格式-> SESSDATA=697ab56%122%2202C7C1861268918*81; 
